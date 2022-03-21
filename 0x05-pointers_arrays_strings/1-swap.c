@@ -2,7 +2,7 @@
 
 /**
  * swap_int - main
- * @a: pointer 
+ * @a: pointer
  * @b: pointer
  */
 
