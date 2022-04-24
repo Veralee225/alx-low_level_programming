@@ -2,4 +2,4 @@
 
 ## Objective of this projects
 - When and why using linked lists vs array
-- How to build and use linked lists
+- How to build and use linked lists. 
