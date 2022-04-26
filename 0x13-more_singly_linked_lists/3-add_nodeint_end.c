@@ -4,10 +4,11 @@
 #include "lists.h"
 
 /**
- * main
+ * add_nodeint_end - add a node at the end of a linked list
+ * @head: Character to print
+ * @n: string for the new node
  * 
- * Return: 
- * 
+ * Return: New node
  */
 listint_t *add_nodeint_end(list_t **head, const int n)
 {
