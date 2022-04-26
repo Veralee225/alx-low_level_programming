@@ -12,7 +12,7 @@ int main(void)
 {
     listint_t *head;
     listint_t *new;
-    listint_t hello = {"School", 8, NULL};
+    listint_t hello = {"World", 5, NULL};
     size_t n;
 
     head = &hello;
@@ -23,7 +23,7 @@ int main(void)
         return (1);
     }
     new->str = strdup("Hello");
-    new->len = 8;
+    new->len = 5;
     new->next = head;
     head = new;
     n = print_list(head);
