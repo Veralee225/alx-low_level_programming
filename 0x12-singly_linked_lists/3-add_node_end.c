@@ -60,7 +60,7 @@ list_t *createNewNode(const char *str)
 		return (NULL);
 	}
 
-	new_node_ptr->len = _strlen(new_node_ptr->str);
+	new_node_ptr->len = strlen(new_node_ptr->str);
 	new_node_ptr->next = NULL;
 
 	return (new_node_ptr);
