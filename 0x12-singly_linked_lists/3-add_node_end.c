@@ -2,6 +2,8 @@
 #include <stdio.h>
 #include "lists.h"
 
+char *strdup(const char *string);
+
 list_t *createNewNode(const char *str);
 
 /**
@@ -44,17 +46,6 @@ list_t *add_node_end(list_t **head, const char *str)
  * Return: pointer to the new node (SUCCESS) OR
  * NULL, if there is insufficent memory available (FAILURE)
  */
-
-char *strdup(const char *str)
-{
-	int n = strlen(str) + 1;
-	char *dup = malloc(n);
-	if (dup)
-	{
-		strcpy(dup, str);
-	}
-	return dup;
-}
 
 list_t *createNewNode(const char *str)
 {
