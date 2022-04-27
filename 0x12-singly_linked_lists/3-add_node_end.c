@@ -2,8 +2,6 @@
 #include <stdio.h>
 #include "lists.h"
 
-char *strdup(const char *string);
-
 list_t *createNewNode(const char *str);
 
 /**
