@@ -1,7 +1,6 @@
 #include <string.h>
 #include <stdio.h>
 #include "lists.h"
-#include "strlen.c"
 
 list_t *createNewNode(const char *str);
 
