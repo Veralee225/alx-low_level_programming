@@ -49,6 +49,17 @@ list_t *createNewNode(const char *str)
 {
 	list_t *new_node_ptr = malloc(sizeof(list_t));
 
+	char *strdup(const char *str)
+	{
+		int n = strlen(str) + 1;
+		char *dup = malloc(n);
+		if(dup)
+		{
+			strcpy(dup, str);
+		}
+		return dup;
+	}
+
 	if (!new_node_ptr)
 		return (NULL);
 
