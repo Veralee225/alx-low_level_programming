@@ -5,12 +5,12 @@
 list_t *createNewNode(const char *str);
 
 /**
-* add_node_end - dds a new node at the end of a list_t list
-* @head: douple pointer to the head of the linked list
-* @str: pointer to string to be assigned to the added node's str property
-* Return: pointer to the new node (SUCCESS) OR
-* NULL, if there is insufficent memory available (FAILURE)
-*/
+ * add_node_end - dds a new node at the end of a list_t list
+ * @head: douple pointer to the head of the linked list
+ * @str: pointer to string to be assigned to the added node's str property
+ * Return: pointer to the new node (SUCCESS) OR
+ * NULL, if there is insufficent memory available (FAILURE)
+ */
 list_t *add_node_end(list_t **head, const char *str)
 {
 	list_t *current_node = *head;
@@ -39,26 +39,26 @@ list_t *add_node_end(list_t **head, const char *str)
 }
 
 /**
-* createNewNode - create a new list_t list node
-* @str: pointer to string to be assigned to the created node's str property
-* Return: pointer to the new node (SUCCESS) OR
-* NULL, if there is insufficent memory available (FAILURE)
-*/
+ * createNewNode - create a new list_t list node
+ * @str: pointer to string to be assigned to the created node's str property
+ * Return: pointer to the new node (SUCCESS) OR
+ * NULL, if there is insufficent memory available (FAILURE)
+ */
+
+char *strdup(const char *str)
+{
+	int n = strlen(str) + 1;
+	char *dup = malloc(n);
+	if (dup)
+	{
+		strcpy(dup, str);
+	}
+	return dup;
+}
 
 list_t *createNewNode(const char *str)
 {
 	list_t *new_node_ptr = malloc(sizeof(list_t));
-
-	char *strdup(const char *str)
-	{
-		int n = strlen(str) + 1;
-		char *dup = malloc(n);
-		if(dup)
-		{
-			strcpy(dup, str);
-		}
-		return dup;
-	}
 
 	if (!new_node_ptr)
 		return (NULL);
