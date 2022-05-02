@@ -1,6 +1,6 @@
-# 0x00-hello_world
+# 0x00-hello_world.
 
-I'm learning about the introductory aspect of C
+I'm learning about the introductory aspect of C.
 
 The processes to execute a file; Starting from the preprocessor, to the compiler, assembler and finally the linker where the .exe file is produced.
 
