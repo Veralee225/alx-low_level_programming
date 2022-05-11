@@ -3,9 +3,9 @@
 #include <stdio.h>
 
 /**
- * _strlen - find the length of a string
- * @s: pointer to the string to check
- * Return: void
+*_strlen - find the length of a string
+*@s: pointer to the string to check
+*Return: void
 */
 
 
@@ -20,11 +20,11 @@ return (i);
 
 
 /**
- * binary_to_uint - converts a binary number to an unsigned int
- * @b: binary number
- *
- * Return: 0 or converted number
- */
+*binary_to_uint - converts a binary number to an unsigned int
+*@b: binary number
+*
+*Return: 0 or converted number
+*/
 
 unsigned int binary_to_uint(const char *b)
 {
