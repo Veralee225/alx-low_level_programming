@@ -1,5 +1,5 @@
-#ifndef DOUBLY_LINKED_LIST_H_
-#define DOUBLY_LINKED_LIST_H_
+#ifndef HOLBERTON_H
+#define HOLBERTON_H
 
 #include <stdlib.h>
 
@@ -10,7 +10,7 @@
  * @next: points to the next node
  *
  * Description: doubly linked list node structure
- * for ALX project
+ * for Holberton project
  */
 typedef struct dlistint_s
 {
