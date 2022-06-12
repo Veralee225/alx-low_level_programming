@@ -1,29 +1,33 @@
 #include "lists.h"
-#include <string.h>
 
 /**
- * *add_dnodeint - adds a node to a linked list head
- * @head: linked list head
- * @n: int element of the linked list
- * Return: number of elements
+ * *add_dnodeint - add node
+ * @head: param
+ * @n: param
+ *
+ * Return: Number of node
  */
-
 dlistint_t *add_dnodeint(dlistint_t **head, const int n)
 {
-	dlistint_t *new_node;
+	dlistint_t *new;
 
-	new_node = malloc(sizeof(dlistint_t));
-
-	if (new_node == NULL)
+	new = malloc(sizeof(dlistint_t));
+	if (new == NULL)
+		return (*head);
+	new->n = n;
+	if (*head == NULL)
 	{
-		free(new_node);
-		return (NULL);
+		new->prev = NULL;
+		new->next = NULL;
+		*head = new;
+		return (new);
 	}
-
-	new_node->n = n;
-	new_node->next = *head;
-    new_node->prev = NULL;
-	*head = new_node;
-
-	return (new_node);
+	else
+	{
+		(*head)->prev = new;
+		new->prev = NULL;
+		new->next = *head;
+		*head = new;
+		return (new);
+	}
 }
