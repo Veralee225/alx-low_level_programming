@@ -1,41 +1,23 @@
 #include "lists.h"
 
 /**
- * delete_dnodeint_at_index - delete node at specific index
- * @head: head of linked list
- * @index: index of node to delete
- * Return: 1 on success, -1 on failure
+ * free_dlistint - frees a dlistint_t list
+ * @head: pointer to head of the dlistint_t list to be freed
  */
 
-int delete_dnodeint_at_index(dlistint_t **head, unsigned int index)
+void free_dlistint(dlistint_t *head)
 {
-	dlistint_t *current;
+	dlistint_t *current_node = head, *free_temp;
 
-	if (head == NULL)
-		return (-1);
+	if (!head)
+		return;
 
-	current = *head;
-
-	if (current == NULL)
-		return (-1);
-
-	while (index != 0)
+	while (current_node->next)
 	{
-		current = current->next;
-		index--;
-		if (current == NULL)
-			return (-1);
+		free_temp = current_node;
+		current_node = current_node->next;
+		free(free_temp);
 	}
 
-	if (current->prev != NULL)
-		current->prev->next = current->next;
-	else
-	{
-		*head = current->next;
-		if (current->next != NULL)
-			current->next->prev = NULL;
-		free(current);
-	}
-
-	return (1);
+	free(current_node);
 }
