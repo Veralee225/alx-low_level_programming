@@ -20,6 +20,3 @@
 - variables: *CC*, *SRC*
     - CC: the compiler to be used
     SRC: the *.c* files
-
-
-tutorialcup.com/leetcode-solutions/island-perimeter-leetcode-solution.htm
